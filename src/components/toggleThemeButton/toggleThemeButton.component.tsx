@@ -7,7 +7,7 @@ const ToggleThemeButton = () => {
 
   return (
     <Button onClick={toggleTheme}>
-      Switch to {theme === 'light' ? 'Dark' : 'Light'} Mode
+      Switch to {theme.name === 'light' ? 'Dark' : 'Light'} Mode
     </Button>
   );
 };

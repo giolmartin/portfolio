@@ -1,3 +1,5 @@
+import { fonts } from './fonts';
+
 export interface Theme {
   name: string;
   background: string;
@@ -8,6 +10,8 @@ export interface Theme {
   accent: string;
   after: string;
   before: string;
+  afterTrail: string;
+  fonts: typeof fonts;
 }
 
 const lightTheme: Theme = {
@@ -20,6 +24,8 @@ const lightTheme: Theme = {
   accent: '#E71D36',
   after: '#9B59B6',
   before: '#C0392B',
+  afterTrail: '#EADBB2',
+  fonts: fonts,
 };
 
 const darkTheme: Theme = {
@@ -32,6 +38,8 @@ const darkTheme: Theme = {
   accent: '#E71D36',
   after: '#682C61',
   before: '#F1C40F',
+  afterTrail: 'rgba(44, 44, 4, 1)',
+  fonts: fonts,
 };
 
 export { lightTheme, darkTheme };

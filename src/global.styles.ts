@@ -10,8 +10,4 @@ export const GlobalStyles = createGlobalStyle`
     }
 `;
 
-export const colors = {
-  primary: '#0070f3',
-  secondary: '#eaeaea',
-  backgroundGradientLight: {},
-};
+

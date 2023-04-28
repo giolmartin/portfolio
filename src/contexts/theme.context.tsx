@@ -1,12 +1,12 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 import { ThemeProvider as StyledThemeProvider } from 'styled-components';
-import { lightTheme, darkTheme } from './theme.interface';
+import { lightTheme, darkTheme, Theme } from './theme.interface';
 
 const ThemeContext = createContext<{
-  theme: string;
+  theme: Theme;
   toggleTheme: () => void;
 }>({
-  theme: 'light',
+  theme: lightTheme,
   toggleTheme: () => {},
 });
 
@@ -28,7 +28,7 @@ export const ThemeProvider: React.FC<CustomThemeProviderProps> = ({
   };
 
   return (
-    <ThemeContext.Provider value={{ theme: theme.name, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme: theme, toggleTheme }}>
       <StyledThemeProvider theme={theme}>{children}</StyledThemeProvider>
     </ThemeContext.Provider>
   );
