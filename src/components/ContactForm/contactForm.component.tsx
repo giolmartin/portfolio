@@ -16,6 +16,7 @@ import {
   Message,
 } from './contactForm.styles';
 
+//TODO: Add form validation and error handling. Also need to add post request to send email.
 const ContactForm: React.FC = () => {
   const { theme } = useTheme();
   const [isSending, setIsSending] = useState(false);

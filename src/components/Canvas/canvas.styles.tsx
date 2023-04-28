@@ -26,7 +26,7 @@ export const Square = styled.div`
   position: relative;
   width: 100%;
   height: 90vh;
-  margin: 5rem;
+  margin: 3rem;
   background: ${({ theme }) => theme.background};
   border-radius: 20px;
   display: flex;
@@ -56,7 +56,7 @@ export const Square = styled.div`
     width: 200vw;
     height: 200vh;
     background-image: conic-gradient(
-      transparent,
+      ${({ theme }) => theme.beforeTrail},
       transparent,
       transparent,
       ${({ theme }) => theme.before}
@@ -71,7 +71,7 @@ export const Square = styled.div`
 
 export const Border = styled.span`
   position: absolute;
-  inset: 5px;
+  inset: 3px;
   border-radius: 16px;
   background: ${({ theme }) => theme.background};
   z-index: 1;

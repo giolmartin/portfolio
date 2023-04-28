@@ -5,5 +5,5 @@ export const Title = styled.h1`
   color: ${({ theme }) => theme.text};
   text-align: center;
   margin-bottom: 2rem;
-  z-index: 1;
+  z-index: 0;
 `;

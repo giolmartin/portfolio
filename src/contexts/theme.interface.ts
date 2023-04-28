@@ -10,9 +10,30 @@ export interface Theme {
   accent: string;
   after: string;
   before: string;
+  beforeTrail: string;
   afterTrail: string;
   fonts: typeof fonts;
+  navbar_underline_color: string;
+  navbar_active_color: string;
 }
+
+const neonRainbow = {
+  neon_pink: '#FF69B4',
+  electric_orange: '#FF7F00',
+  bright_yellow: '#FDFD00',
+  neon_green: '#4CFF4C',
+  electric_blue: '#00AEFF',
+  neon_purple: '#BD88FF',
+};
+
+const rainbowVintage = {
+  dusty_pink: '#D49A9A',
+  burnt_orange: '#D66A4A',
+  mustard_yellow: '#D1B971',
+  moss_green: '#8AA98C',
+  vintage_blue: '#6C8DAA',
+  lavender: '#A685B7',
+};
 
 const lightTheme: Theme = {
   name: 'light',
@@ -22,9 +43,12 @@ const lightTheme: Theme = {
   primary: '#D4A373',
   secondary: '#6BADA7',
   accent: '#E71D36',
-  after: '#9B59B6',
-  before: '#C0392B',
-  afterTrail: '#EADBB2',
+  after: rainbowVintage.burnt_orange,
+  before: rainbowVintage.lavender,
+  beforeTrail: rainbowVintage.dusty_pink,
+  afterTrail: rainbowVintage.mustard_yellow,
+  navbar_underline_color: rainbowVintage.moss_green,
+  navbar_active_color: rainbowVintage.vintage_blue,
   fonts: fonts,
 };
 
@@ -36,53 +60,13 @@ const darkTheme: Theme = {
   primary: '#D4A373',
   secondary: '#6BADA7',
   accent: '#E71D36',
-  after: '#682C61',
-  before: '#F1C40F',
+  after: neonRainbow.electric_orange,
+  before: neonRainbow.neon_purple,
   afterTrail: 'rgba(44, 44, 4, 1)',
+  beforeTrail: 'rgba(44, 44, 4, 1)',
+  navbar_underline_color: neonRainbow.neon_green,
+  navbar_active_color: neonRainbow.electric_blue,
   fonts: fonts,
 };
 
 export { lightTheme, darkTheme };
-
-const options = {
-  option1: {
-    light: { after: '#F7CA18', before: '#B85D1C' },
-    dark: { after: '#F39C12', before: '#D35400' },
-  },
-  option2: {
-    light: { after: '#E74C3C', before: '#3498DB' },
-    dark: { after: '#C0392B', before: '#2980B9' },
-  },
-  option3: {
-    light: { after: '#2ECC71', before: '#E67E22' },
-    dark: { after: '#27AE60', before: '#D35400' },
-  },
-  option4: {
-    light: { after: '#9B59B6', before: '#34495E' },
-    dark: { after: '#8E44AD', before: '#2C3E50' },
-  },
-  option5: {
-    light: { after: '#95A5A6', before: '#F1C40F' },
-    dark: { after: '#7F8C8D', before: '#F39C12' },
-  },
-  option6: {
-    light: { after: '#1ABC9C', before: '#F2784B' },
-    dark: { after: '#16A085', before: '#E47127' },
-  },
-  option7: {
-    light: { after: '#6C7A89', before: '#36D7B7' },
-    dark: { after: '#4B6584', before: '#2BBEAA' },
-  },
-  option8: {
-    light: { after: '#E08283', before: '#87D37C' },
-    dark: { after: '#CA625A', before: '#6DAF72' },
-  },
-  option9: {
-    light: { after: '#913D88', before: '#F7DC6F' },
-    dark: { after: '#682C61', before: '#F1C40F' },
-  },
-  option10: {
-    light: { after: '#4183D7', before: '#D2527F' },
-    dark: { after: '#2574A9', before: '#D24D57' },
-  },
-};

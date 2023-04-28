@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { Background, Square, Border } from './hero.styles';
+import Navbar from '../Navbar/navbar.component';
 
 const Hero: React.FC = () => {
   const [gradient, setGradient] = useState(
@@ -23,6 +24,7 @@ const Hero: React.FC = () => {
 
   return (
     <>
+      
       <Background gradient={gradient} onMouseMove={updateGradient}>
         <Square>
           <Border></Border>

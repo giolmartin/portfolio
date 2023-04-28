@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+const mobile = `@media (max-width: 768px)`;
 
 export const Container = styled.div`
   background-color: #231f3a;
@@ -23,6 +24,10 @@ export const FormContainer = styled.form`
   z-index: 500;
   width: 400px;
   height: 100vh;
+  ${mobile} {
+    width: 100%;
+    padding: 0 20px;
+  }
 `;
 
 export const Input = styled.input`
