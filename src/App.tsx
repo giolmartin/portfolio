@@ -11,7 +11,7 @@ function App() {
   return (
     <ThemeProvider>
       <GlobalStyles />
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/contact' element={<ContactPage />} />
