@@ -164,7 +164,7 @@ const ContactForm: React.FC = () => {
             </Button>
           </Update>
         )}
-        <Title className='inp'>Send me a space pants email</Title>
+        <Title className='inp'>Contact Me</Title>
         <Input className='inp' type='text' placeholder='Name' />
         <Input className='inp' type='text' placeholder='Email' />
         <TextArea className='inp' placeholder='Message' />
