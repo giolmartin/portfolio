@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './contexts/theme.context';
 
 import { GlobalStyles } from './global.styles';
-import Navbar from './components/Navbar/navbar.component';
 import HomePage from './pages/Home/home.page';
 import ContactPage from './pages/Contact/contact.page';
 import ProjectsPage from './pages/Projects/projects.page';
@@ -13,7 +12,6 @@ function App() {
     <ThemeProvider>
       <GlobalStyles />
       <Router>
-        {/* <Navbar /> */}
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/contact' element={<ContactPage />} />
