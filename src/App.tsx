@@ -12,7 +12,7 @@ function App() {
   return (
     <ThemeProvider>
       <GlobalStyles />
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router>
         {/* <Navbar /> */}
         <Routes>
           <Route path='/' element={<HomePage />} />
