@@ -1,23 +1,31 @@
 import { fonts } from './fonts';
-
+import { screenSize } from './screenSize';
 export interface Theme {
   name: string;
+
   background: string;
   text: string;
   overlay: string;
+
   primary: string;
   secondary: string;
   accent: string;
+
   after: string;
   before: string;
+
   beforeTrail: string;
   afterTrail: string;
-  fonts: typeof fonts;
+
   navbar_underline_color: string;
   navbar_active_color: string;
+
   card_bg: string;
   card_center_hover: string;
   card_outside_hover: string;
+
+  fonts: typeof fonts;
+  screenSize: typeof screenSize;
 }
 
 const neonRainbow = {
@@ -81,6 +89,7 @@ const lightTheme: Theme = {
   card_center_hover: 'rgba(214, 106, 74, 0.5)',
   card_outside_hover: 'rgba(214, 106, 74, 0.06)',
 
+  screenSize: screenSize,
   fonts: fonts,
 };
 
@@ -109,6 +118,7 @@ const darkTheme: Theme = {
   card_center_hover: 'rgba(189, 136, 255, 0.4)',
   card_outside_hover: 'rgba(189, 136, 255, 0.06)',
 
+  screenSize: screenSize,
   fonts: fonts,
 };
 

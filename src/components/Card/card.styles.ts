@@ -1,12 +1,17 @@
 import styled from 'styled-components';
 
+const mobile_small = `@media (max-width: 768px)`;
+const mobile = `@media (max-width: 1070px)`;
+const tablet = `@media (max-width: 1280px)`;
+
 export const CardsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  flex-direction: columns;
 
-  width: 90%;
+  width: 95%;
   height: 80%;
   background-color: ${({ theme }) => theme.background};
   border-radius: 10px;
@@ -19,6 +24,18 @@ export const CardsContainer = styled.div`
   &:hover > .card::after {
     opacity: 1;
   }
+
+  ${tablet} {
+    gap: 6px;
+  }
+
+  ${mobile} {
+    gap: 4px;
+  }
+
+  ${mobile_small} {
+    gap: 2px;
+  }
 `;
 
 export const Card = styled.div`
@@ -29,7 +46,7 @@ export const Card = styled.div`
   height: 60%;
   flex-direction: column;
   position: relative;
-  min-width: 350px;
+  width: 350px;
 
   &:hover::before {
     opacity: 1;
@@ -64,6 +81,17 @@ export const Card = styled.div`
       transparent 40%
     );
     z-index: 1001;
+  }
+
+  ${tablet} {
+    width: 300px;
+  }
+  ${mobile} {
+    width: calc(70% - 50px);
+  }
+
+  ${mobile_small} {
+    width: calc(100% - 50px);
   }
 `;
 

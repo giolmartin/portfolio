@@ -25,7 +25,7 @@ export const NavbarList = styled.ul`
   padding: 0;
 
   ${mobile_small} {
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-top: 0;
