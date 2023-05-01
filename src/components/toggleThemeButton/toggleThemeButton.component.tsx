@@ -1,14 +1,16 @@
 import React from 'react';
 import { useTheme } from '../../contexts/theme.context';
-import { Button } from './toggleThemeButton.styles';
+import { ButtonContainer, ThemeButton } from './toggleThemeButton.styles';
 
 const ToggleThemeButton = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <Button onClick={toggleTheme}>
-      Switch to {theme.name === 'light' ? 'Dark' : 'Light'} Mode
-    </Button>
+    <ButtonContainer>
+      <ThemeButton onClick={toggleTheme}>
+        {theme.name === 'light' ? 'Dark' : 'Light'} Mode
+      </ThemeButton>
+    </ButtonContainer>
   );
 };
 

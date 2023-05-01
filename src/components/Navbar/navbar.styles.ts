@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { NavLink, NavLinkProps } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 const mobile_small = `@media (max-width: 768px)`;
 
 export const NavbarContainer = styled.nav`
@@ -13,6 +13,7 @@ export const NavbarContainer = styled.nav`
   z-index: 1000;
   @{mobile_small} {
     width: 100%;
+    
     }
 `;
 
@@ -21,6 +22,7 @@ export const NavbarList = styled.ul`
   justify-content: space-between;
   align-items: center;
   list-style: none;
+  padding: 0;
 
   ${mobile_small} {
     flex-direction: column;
@@ -32,7 +34,7 @@ export const NavbarList = styled.ul`
 
 export const NavbarItem = styled.li`
   font-family: ${({ theme }) => theme.fonts.navbar};
-  font-size: 20px;
+  font-size: 1.2rem;
   font-weight: 200;
   color: ${({ theme }) => theme.text};
   cursor: pointer;
@@ -41,6 +43,7 @@ export const NavbarItem = styled.li`
 
   ${mobile_small} {
     margin: 5px 0;
+    font-size: 1rem;
   }
 `;
 
@@ -58,14 +61,14 @@ export const StyledNavLink = styled(NavLink).attrs({
   &:after {
     content: '';
     width: 0;
-    height: 5px;
+    height: 3px;
     left: 0;
     top: 100%;
     border-radius: 2px;
     position: absolute;
     background-color: ${({ theme }) => theme.navbar_underline_color};
     transition: 0.5s;
-    box-shadow: 0px 0px 8px ${({ theme }) => theme.text};
+    box-shadow: 0px 0px 3px ${({ theme }) => theme.text};
   }
 
   &:hover:after {
