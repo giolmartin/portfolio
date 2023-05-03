@@ -10,7 +10,6 @@ export const Background = styled.div`
 
   @media (max-width: 768px) {
     min-height: 100vh;
-    border-radius: 0;
   }
 `;
 
@@ -82,25 +81,3 @@ export const Border = styled.span`
   z-index: 1;
 `;
 
-export const Grid = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(40px, 1fr));
-  pointer-events: none;
-  z-index: 1;
-  color: ${({ theme }) => theme.text};
-`;
-export const GridItem = styled.div`
-  width: 100%;
-  height: 100%;
-  background-color: ${({ theme }) => theme.background};
-  opacity: 0;
-  transition: opacity 0.2s;
-  color: ${({ theme }) => theme.text};
-  z-index: 1;
-`;

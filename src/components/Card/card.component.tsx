@@ -1,5 +1,8 @@
 import React, { useRef } from 'react';
 
+import { Link } from 'react-router-dom';
+
+
 import { CardsContainer, Card, CardContent, Text } from './card.styles';
 
 const Cards: React.FC = () => {
@@ -22,11 +25,13 @@ const Cards: React.FC = () => {
 
   return (
     <CardsContainer id='cards' ref={cardsRef} onMouseMove={handleMouseMove}>
-      <Card className='card'>
+      <Link to='https://github.com/giolmartin/swimming_app'>
+          <Card className='card'>
         <CardContent>
           <Text> 1</Text>
         </CardContent>
-      </Card>
+          </Card>
+        </Link>
       <Card className='card'>
         <CardContent>
           <Text> 2</Text>
