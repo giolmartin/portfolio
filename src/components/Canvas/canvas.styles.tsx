@@ -10,6 +10,7 @@ export const Background = styled.div`
 
   @media (max-width: 768px) {
     min-height: 100vh;
+    border-radius: 0;
   }
 `;
 
