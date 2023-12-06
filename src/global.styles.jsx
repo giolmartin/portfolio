@@ -1,4 +1,4 @@
-import { createGlobalStyle, styled } from 'styled-components';
+import { createGlobalStyle, keyframes, styled } from 'styled-components';
 
 export const colors = {
   primary: '#7ba2cc',
@@ -21,5 +21,14 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family: 'Roboto', sans-serif;
     background: ${colors.background};
+  }
+`;
+
+export const FadeInAnimation = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 `;

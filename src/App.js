@@ -5,13 +5,12 @@ import { NavTabProvider } from './context/portfolio.context';
 import { GlobalStyle } from './global.styles';
 
 import Navbar from './components/Navbar/navbar.component';
+import IntroAnimation from './components/IntroAnimation/intro.component';
 
 import HomePage from './pages/Home/home.page';
 import AboutPage from './pages/About/about.page';
 import ProjectsPage from './pages/Projects/projects.page';
 import ContactPage from './pages/Contact/contact.page';
-
-import IntroAnimation from './components/IntroAnimation/intro.component';
 
 function App() {
   const [introComplete, setIntroComplete] = useState(false);
@@ -19,7 +18,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIntroComplete(true);
-    }, 4000); // Corresponding to the duration of the intro animation
+    }, 5000); // Corresponding to the duration of the intro animation
     return () => clearTimeout(timer);
   }, []);
 
@@ -30,6 +29,7 @@ function App() {
         {introComplete && <Navbar />}
         {introComplete ? (
           <Routes>
+
             <Route path='/' element={<HomePage />} />
             <Route path='/projects' element={<ProjectsPage />} />
             <Route path='/about' element={<AboutPage />} />

@@ -1,12 +1,11 @@
 import React from 'react';
 
-import './home.style.jsx';
-
+import { HomeContainer, Text } from './home.style.jsx';
 const HomePage = () => {
   return (
-    <div>
-      <h1>HOME PAGE</h1>
-    </div>
+    <HomeContainer>
+      <Text>HOME PAGE</Text>
+    </HomeContainer>
   );
 };
 

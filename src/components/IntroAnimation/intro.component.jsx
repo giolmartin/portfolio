@@ -13,8 +13,8 @@ const IntroAnimation = ({ onIntroEnd }) => {
 
   return (
     <div>
-      <Name>Myy Namee</Name>
-      <Phrase>Portfolio</Phrase>
+      <Name>GIO MARTIN</Name>
+      <Phrase>PORTFOLIO</Phrase>
     </div>
   );
 };
