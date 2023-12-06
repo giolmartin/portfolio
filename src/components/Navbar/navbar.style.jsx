@@ -20,5 +20,4 @@ export const NavTab = styled.div`
   position: relative;
   margin: 20px;
   font-size: ${(props) => (props.active ? '2em' : '1em')};
-  font-size: ${(props) => (props.active ? '2em' : '1em')};
 `;

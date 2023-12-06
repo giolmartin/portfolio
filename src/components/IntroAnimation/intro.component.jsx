@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import { Name, Phrase } from './intro.style.jsx';
+
 const IntroAnimation = ({ onIntroEnd }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
