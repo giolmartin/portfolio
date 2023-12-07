@@ -25,10 +25,10 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const FadeInAnimation = keyframes`
-  0% {
+from {
     opacity: 0;
   }
-  100% {
+  to{
     opacity: 1;
   }
 `;

@@ -1,8 +1,14 @@
 import React from 'react';
 
-const ContactPage = () => {
-    return <h1>CONTACT PAGE</h1>;
-}
-    
-export default ContactPage;
+import { ContactContainer , Text} from './contact.style';
+import ContactForm from '../../components/ContactForm/contactForm.component';
 
+const ContactPage = () => {
+  return (
+    <ContactContainer>
+      <ContactForm />
+    </ContactContainer>
+  );
+};
+
+export default ContactPage;

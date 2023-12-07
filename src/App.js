@@ -6,6 +6,7 @@ import { GlobalStyle } from './global.styles';
 
 import Navbar from './components/Navbar/navbar.component';
 import IntroAnimation from './components/IntroAnimation/intro.component';
+import Background from './components/Background/background.component';
 
 import HomePage from './pages/Home/home.page';
 import AboutPage from './pages/About/about.page';
@@ -26,10 +27,10 @@ function App() {
     <NavTabProvider>
       <Router>
         <GlobalStyle />
+        {introComplete && <Background />}
         {introComplete && <Navbar />}
         {introComplete ? (
           <Routes>
-
             <Route path='/' element={<HomePage />} />
             <Route path='/projects' element={<ProjectsPage />} />
             <Route path='/about' element={<AboutPage />} />

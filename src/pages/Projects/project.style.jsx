@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { colors, FadeInAnimation } from '../../global.styles';
 
-export const HomeContainer = styled.div`
+export const ProjectContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,7 +12,6 @@ export const HomeContainer = styled.div`
   width: 100vw;
   animation: ${FadeInAnimation} 2s ease-in-out;
 `;
-
 export const Text = styled.h1`
   color: ${colors.primary};
   font-size: 3rem;

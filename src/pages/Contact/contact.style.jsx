@@ -2,11 +2,10 @@ import styled from 'styled-components';
 
 import { colors, FadeInAnimation } from '../../global.styles';
 
-export const HomeContainer = styled.div`
+export const ContactContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   background: transparent;
   height: 100vh;
   width: 100vw;

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { colors, FadeInAnimation } from '../../global.styles';
 
-export const HomeContainer = styled.div`
+export const AboutContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
