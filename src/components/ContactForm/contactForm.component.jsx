@@ -180,7 +180,7 @@ const ContactForm = () => {
             height='100%'
             id='rectwrap'
             // bgColor={theme.background}
-            bgColor={'#36454f'}
+            bgColor='#36454f'
           >
             <svg width='100%' height='100%'>
               <defs>
@@ -192,11 +192,11 @@ const ContactForm = () => {
                   y2='0%'
                 >
                   {/* <stop offset='0%' stopColor={theme.after} stopOpacity='1' /> */}
-                  <stop offset='0%' stopColor={'red'} stopOpacity='1' />
+                  <stop offset='0%' stopColor='red' stopOpacity='1' />
                   <stop
                     offset='100%'
                     // stopColor={theme.before}
-                    stopColor={'blue'}
+                    stopColor='blue'
                     stopOpacity='1'
                   />
                 </linearGradient>
@@ -206,6 +206,8 @@ const ContactForm = () => {
                 height='100%'
                 strokeWidth='3'
                 fill='none'
+                fillOpacity='0.3'
+                // fill='none'  This is the background of the submit button
                 stroke='url(#linear-gradient)'
                 strokeDasharray='5000'
                 strokeDashoffset='5000'
@@ -220,7 +222,10 @@ const ContactForm = () => {
               viewBox='0 0 512.056 512.056'
               width='30'
               xmlns='http://www.w3.org/2000/svg'
-              fill='currentColor'
+              // Change for animated svg color on submit
+              // fill='currentColor'
+              fill='white'
+              fillOpacity='0.8'
             >
               <path d='m350.038 120.265c-7.206-36.687-27.738-70.157-57.939-92.992l-36.071-27.273-36.071 27.272c-30.201 22.835-50.733 56.305-57.939 92.992h188.02z' />
               <path d='m394.777 252.144v151.096h77.609v-69.027z' />

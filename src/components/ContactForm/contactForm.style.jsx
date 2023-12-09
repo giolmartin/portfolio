@@ -77,7 +77,7 @@ export const SubmitButton = styled.button`
   border: 0;
   cursor: pointer;
   ${'' /* background-color: ${({ theme }) => theme.background}; */}
-  background-color: 'yellow';
+  background-color: transparent;
   ${'' /* color: ${({ theme }) => theme.text}; */}
   color: 'blue';
   font-weight: 200;
