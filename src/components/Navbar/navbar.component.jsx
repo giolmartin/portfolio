@@ -2,11 +2,13 @@ import React, { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 import { useNavTabContext } from '../../context/portfolio.context';
+import { useThemeContext } from '../../context/theme.context';
 
 import { NavTab, NavbarContainer } from './navbar.style';
 
 const Navbar = () => {
   const { activeTab, setActiveTab } = useNavTabContext();
+  const { theme } = useThemeContext();
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -32,6 +34,8 @@ const Navbar = () => {
           key={tab}
           active={activeTab === tab}
           onClick={() => handleTabClick(tab)}
+          color={theme.text}
+          hover_color={theme.hover}
         >
           {activeTab === tab ? '•' : tab}
         </NavTab>

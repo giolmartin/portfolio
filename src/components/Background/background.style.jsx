@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { colors, FadeInAnimation } from '../../global.styles';
+import { FadeInAnimation } from '../../global.styles';
 
 export const BackgroundContainer = styled.div`
   position: fixed;

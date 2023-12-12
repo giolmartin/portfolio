@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors, FadeInAnimation } from '../../global.styles';
+import { FadeInAnimation } from '../../global.styles';
 
 export const NavbarContainer = styled.nav`
   position: fixed;
@@ -18,9 +18,13 @@ export const NavbarContainer = styled.nav`
 
 export const NavTab = styled.div`
   padding: 20px;
-  color: yellow;
+  color: ${(props) => props.color};
   cursor: pointer;
   position: relative;
   margin: 20px;
   font-size: ${(props) => (props.active ? '2em' : '1em')};
+
+  &:hover {
+    color: ${(hover_color) => hover_color.hover_color};
+  }
 `;

@@ -14,7 +14,7 @@ export const AboutContainer = styled.div`
 `;
 
 export const Text = styled.h1`
-  color: ${colors.primary};
+  color: ${(props) => props.color};
   font-size: 3rem;
   margin-bottom: 2rem;
 `;

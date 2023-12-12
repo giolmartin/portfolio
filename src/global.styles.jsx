@@ -15,12 +15,25 @@ export const colors_animation = {
   secondary: '#ffd700',
 };
 
+//Choose three fonts and then transfer to the theme context.
+export const fonts = {
+  header: 'Roboto Slab',
+  accent: 'Montserrat',
+  text: 'Open Sans',
+  speacial: 'Pacifico',
+};
+
 export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    ${
+      '' /* Need to change the nackground color 
+            to individual colors for 
+            themes and the intro animation */
+    }
     background: ${colors.background};
+
   }
 `;
 

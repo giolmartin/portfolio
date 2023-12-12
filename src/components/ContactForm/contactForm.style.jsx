@@ -1,11 +1,9 @@
 import styled from 'styled-components';
-const mobile = `@media (max-width: 768px)`;
 
 export const Container = styled.div`
   background-color: transparent;
   ${'' /* font-family: ${({ theme }) => theme.fonts.text}; */}
-  color: white;
-  ${'' /* color: ${({ theme }) => theme.text}; */}
+  color: ${({ theme }) => theme.text};
   margin: 0;
   display: flex;
   justify-content: center;
@@ -24,10 +22,6 @@ export const FormContainer = styled.form`
   z-index: 500;
   width: 400px;
   height: 100vh;
-  ${mobile} {
-    width: 100%;
-    padding: 0 20px;
-  }
 `;
 
 export const Input = styled.input`
@@ -36,15 +30,20 @@ export const Input = styled.input`
   padding: 20px;
   font-size: 17px;
   background-color: transparent;
-  ${'' /* color: ${({ theme }) => theme.text}; */}
+  color: ${({ theme }) => theme.text};
   font-weight: bold;
-  border: 1px solid white;
+  border: 1px solid ${({ theme }) => theme.accent};
   ${'' /* font-family: ${({ theme }) => theme.fonts.text}; */}
   cursor: pointer;
-  ${'' /* border-color: ${({ theme }) => theme.text}; */}
+  border-color: ${({ theme }) => theme.primary};
   &::placeholder {
-    ${'' /* color: ${({ theme }) => theme.text}; */}
+    color: ${({ theme }) => theme.text};
     opacity: 0.8;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: ${({ theme }) => theme.accent};
   }
 `;
 
@@ -54,15 +53,20 @@ export const TextArea = styled.textarea`
   padding: 20px;
   font-size: 17px;
   background-color: transparent;
-  ${'' /* color: ${({ theme }) => theme.text}; */}
+  color: ${({ theme }) => theme.text};
   font-weight: bold;
   border: 1px solid white;
   ${'' /* font-family: ${({ theme }) => theme.fonts.text}; */}
   cursor: pointer;
-  ${'' /* border-color: ${({ theme }) => theme.text}; */}
+  border-color: ${({ theme }) => theme.primary};
   &::placeholder {
-    ${'' /* color: ${({ theme }) => theme.text}; */}
+    color: ${({ theme }) => theme.text};
     opacity: 0.8;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: ${({ theme }) => theme.accent};
   }
 `;
 
@@ -71,14 +75,14 @@ export const SubmitButton = styled.button`
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  ${'' /* outline: 1px solid ${({ theme }) => theme.text}; */}
-  outline: 1px solid "white";
+  outline: 1px solid ${({ theme }) => theme.text};
+  outline: 1px solid 'white';
   outline-offset: -1px;
   border: 0;
   cursor: pointer;
-  ${'' /* background-color: ${({ theme }) => theme.background}; */}
+  background-color: ${({ theme }) => theme.background};
   background-color: transparent;
-  ${'' /* color: ${({ theme }) => theme.text}; */}
+  color: ${({ theme }) => theme.text};
   color: 'blue';
   font-weight: 200;
   ${'' /* font-family: ${({ theme }) => theme.fonts.special}; */}
@@ -99,8 +103,7 @@ export const Update = styled.div`
   height: 81%;
   position: absolute;
   font-size: 15px;
-  ${'' /* border-color: ${({ theme }) => theme.text}; */}
-  border-color: "white";
+  border-color: ${({ theme }) => theme.text};
 `;
 
 export const Button = styled.button`
@@ -111,27 +114,25 @@ export const Button = styled.button`
   margin-top: 1rem;
   background-color: transparent;
   border: 1px solid white;
-  ${'' /* color: ${({ theme }) => theme.text}; */}
-  color: "white";
+  color: ${({ theme }) => theme.accent};
   font-weight: 200;
   font-size: 1rem;
   cursor: pointer;
   transition: 0.5s;
-  ${'' /* border-color: ${({ theme }) => theme.after}; */}
-  border-color: "white";
+  border-color: ${({ theme }) => theme.after};
+  border-color: 'white';
   &:hover {
-    ${'' /* border-color: ${({ theme }) => theme.before}; */}
-    border-color: "red";
+    border-color: ${({ theme }) => theme.before};
+    border-color: 'red';
     transition: 0.5s;
   }
 `;
 
 export const RectWrap = styled.svg`
   position: absolute;
-  ${
-    '' /* fill: ${({ bgColor }) => bgColor};
-  border-color: ${({ theme }) => theme.text}; */
-  }
+
+  fill: ${({ bgColor }) => bgColor};
+  border-color: ${({ theme }) => theme.text};
 `;
 
 export const Siz = styled.div`
@@ -141,19 +142,19 @@ export const Siz = styled.div`
 
 export const Title = styled.h1`
   ${'' /* font-family: ${({ theme }) => theme.fonts.header}; */}
-  ${'' /* color: ${({ theme }) => theme.text}; */}
-  color: "white";
+  color: ${({ theme }) => theme.text};
+  color: 'white';
   font-weight: 200;
   font-size: 25px;
   text-align: center;
 `;
 
 export const Message = styled.p`
-  ${
-    '' /* font-family: ${({ theme }) => theme.fonts.text};
-  color: ${({ theme }) => theme.text}; */
-  }
-  color: "white";
+  ${'' /* font-family: ${({ theme }) => theme.fonts.text}; */}
+
+  color: ${({ theme }) => theme.text};
+
+  color: 'white';
   font-weight: 200;
   font-size: 2rem;
   text-align: center;

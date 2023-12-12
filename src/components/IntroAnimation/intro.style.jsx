@@ -1,5 +1,11 @@
 import styled, { keyframes } from 'styled-components';
-import { colors_animation } from '../../global.styles.jsx';
+import { colors_animation, fonts } from '../../global.styles.jsx';
+
+const media = {
+  large_desktop: '@media(min-width: 1200px)',
+  desktop: '@media(min-width: 992px)',
+  mobile: '@media(max-width: 768px)',
+};
 
 //TODO: Add responsive animation for mobile and smaller screens
 //Animation of the name
@@ -27,6 +33,7 @@ export const fadeOut2 = keyframes`
 `;
 
 export const Name = styled.div`
+  font-family: ${fonts.accent};
   color: ${colors_animation.primary};
   font-size: 3vw;
   position: absolute;
@@ -43,6 +50,7 @@ export const Name = styled.div`
 `;
 
 export const Phrase = styled.div`
+  font-family: ${fonts.header};
   color: ${colors_animation.secondary};
   font-size: 5vw;
   position: absolute;

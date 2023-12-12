@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from 'react';
-// import { useTheme } from '../../contexts/theme.context';
 import anime from 'animejs/lib/anime.es.js';
+
+import { useThemeContext } from '../../context/theme.context';
 
 import {
   Container,
@@ -18,7 +19,7 @@ import {
 
 //TODO: Add form validation and error handling. Also need to add post request to send email.
 const ContactForm = () => {
-  // const { theme } = useTheme();
+  const { theme } = useThemeContext();
   const [isSending, setIsSending] = useState(false);
   const [anim, setAnim] = useState(false);
 
@@ -154,33 +155,34 @@ const ContactForm = () => {
   );
 
   return (
-    <Container>
+    <Container theme={theme}>
       <FormContainer id='contactform' onSubmit={send}>
         {isSending && !anim && (
-          <Update id='update'>
-            <Message>Your message is on it's way!</Message>
-            <Button id='btn' onClick={reverseAnim}>
+          <Update id='update' theme={theme}>
+            <Message theme={theme}>Your message is on it's way!</Message>
+            <Button id='btn' onClick={reverseAnim} theme={theme}>
               Send another
             </Button>
           </Update>
         )}
         <Title className='inp'>Contact Me</Title>
-        <Input className='inp' type='text' placeholder='Name' />
-        <Input className='inp' type='text' placeholder='Email' />
-        <TextArea className='inp' placeholder='Message' />
+        <Input className='inp' type='text' placeholder='Name' theme={theme} />
+        <Input className='inp' type='text' placeholder='Email' theme={theme} />
+        <TextArea className='inp' placeholder='Message' theme={theme} />
 
         <SubmitButton
           id='submit'
           type='submit'
           onMouseEnter={() => validateForm(true)}
           onMouseLeave={() => validateForm(false)}
+          theme={theme}
         >
           <RectWrap
             width='100%'
             height='100%'
             id='rectwrap'
-            // bgColor={theme.background}
-            bgColor='#36454f'
+            bgColor={theme.accent}
+            theme={theme}
           >
             <svg width='100%' height='100%'>
               <defs>
@@ -191,12 +193,10 @@ const ContactForm = () => {
                   x2='100%'
                   y2='0%'
                 >
-                  {/* <stop offset='0%' stopColor={theme.after} stopOpacity='1' /> */}
-                  <stop offset='0%' stopColor='red' stopOpacity='1' />
+                  <stop offset='0%' stopColor={theme.primary} stopOpacity='1' />
                   <stop
                     offset='100%'
-                    // stopColor={theme.before}
-                    stopColor='blue'
+                    stopColor={theme.accent}
                     stopOpacity='1'
                   />
                 </linearGradient>
@@ -205,9 +205,8 @@ const ContactForm = () => {
                 width='100%'
                 height='100%'
                 strokeWidth='3'
-                fill='none'
                 fillOpacity='0.3'
-                // fill='none'  This is the background of the submit button
+                fill='none' // This is the background of the submit button
                 stroke='url(#linear-gradient)'
                 strokeDasharray='5000'
                 strokeDashoffset='5000'
@@ -223,8 +222,8 @@ const ContactForm = () => {
               width='30'
               xmlns='http://www.w3.org/2000/svg'
               // Change for animated svg color on submit
-              // fill='currentColor'
-              fill='white'
+              fill='currentColor'
+              // fill='white'
               fillOpacity='0.8'
             >
               <path d='m350.038 120.265c-7.206-36.687-27.738-70.157-57.939-92.992l-36.071-27.273-36.071 27.272c-30.201 22.835-50.733 56.305-57.939 92.992h188.02z' />

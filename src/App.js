@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import { NavTabProvider } from './context/portfolio.context';
+import { ThemeProvider } from './context/theme.context';
 import { GlobalStyle } from './global.styles';
 
 import Navbar from './components/Navbar/navbar.component';
@@ -24,23 +25,25 @@ function App() {
   }, []);
 
   return (
-    <NavTabProvider>
-      <Router>
-        <GlobalStyle />
-        {introComplete && <Background />}
-        {introComplete && <Navbar />}
-        {introComplete ? (
-          <Routes>
-            <Route path='/' element={<HomePage />} />
-            <Route path='/projects' element={<ProjectsPage />} />
-            <Route path='/about' element={<AboutPage />} />
-            <Route path='/contact' element={<ContactPage />} />
-          </Routes>
-        ) : (
-          <IntroAnimation />
-        )}
-      </Router>
-    </NavTabProvider>
+    <ThemeProvider>
+      <NavTabProvider>
+        <Router>
+          <GlobalStyle />
+          {introComplete && <Background />}
+          {introComplete && <Navbar />}
+          {introComplete ? (
+            <Routes>
+              <Route path='/' element={<HomePage />} />
+              <Route path='/projects' element={<ProjectsPage />} />
+              <Route path='/about' element={<AboutPage />} />
+              <Route path='/contact' element={<ContactPage />} />
+            </Routes>
+          ) : (
+            <IntroAnimation />
+          )}
+        </Router>
+      </NavTabProvider>
+    </ThemeProvider>
   );
 }
 
