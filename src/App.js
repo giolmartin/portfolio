@@ -30,7 +30,7 @@ function App() {
         <Router>
           <GlobalStyle />
           {introComplete && <Background />}
-          {introComplete && <Navbar />}
+          {/* {introComplete && <Navbar />} */}
           {introComplete ? (
             <Routes>
               <Route path='/' element={<HomePage />} />

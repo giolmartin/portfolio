@@ -45,3 +45,18 @@ from {
     opacity: 1;
   }
 `;
+
+export const RightSideContainer = styled.div`
+  position: absolute;
+  top: 3.5vh;
+  right: 3.5vh;
+  bottom: 3.5vh;
+  left: 50vw;
+
+  background-color: transparent;
+  z-index: 0;
+
+  @media (max-width: 768px) {
+    ${'' /* left: 50vw;  */}
+  }
+`;

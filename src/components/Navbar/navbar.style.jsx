@@ -2,29 +2,34 @@ import styled from 'styled-components';
 import { FadeInAnimation } from '../../global.styles';
 
 export const NavbarContainer = styled.nav`
-  position: fixed;
+  ${
+    '' /* position: fixed;
   left: 0;
   top: 0;
   height: 100%;
-  width: 80px;
+  width: 80px; */
+  }
+  margin: 0;
+  padding: 0;
   background-color: transparent;
   display: flex;
   flex-direction: column;
   align-items: left;
   justify-content: center;
-  animation: ${FadeInAnimation} 2s ease-in-out;
+  ${'' /* animation: ${FadeInAnimation} 2s ease-in-out; */}
   z-index: 1000;
 `;
 
 export const NavTab = styled.div`
-  padding: 20px;
+  padding: 0px;
   color: ${(props) => props.color};
   cursor: pointer;
   position: relative;
-  margin: 20px;
   font-size: ${(props) => (props.active ? '2em' : '1em')};
+  ${'' /* Check spacing of nav items */}
+  margin: 15px 0px;
 
   &:hover {
-    color: ${(hover_color) => hover_color.hover_color};
+    color: ${(props) => props.hover_color};
   }
 `;
