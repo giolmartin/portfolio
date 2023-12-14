@@ -5,6 +5,7 @@ import { useNavTabContext } from '../../context/portfolio.context';
 import { useThemeContext } from '../../context/theme.context';
 
 import { NavTab, NavbarContainer } from './navbar.style';
+import { tabs } from '../../data/navbar.data';
 
 const Navbar = () => {
   const { activeTab, setActiveTab } = useNavTabContext();
@@ -29,15 +30,15 @@ const Navbar = () => {
 
   return (
     <NavbarContainer>
-      {['Home', 'Projects', 'About', 'Contact'].map((tab) => (
+      {tabs.map((tab) => (
         <NavTab
-          key={tab}
-          active={activeTab === tab}
-          onClick={() => handleTabClick(tab)}
+          key={tab.id}
+          active={activeTab === tab.tile}
+          onClick={() => handleTabClick(tab.url)}
           color={theme.text}
           hover_color={theme.hover}
         >
-          {activeTab === tab ? '•' : tab}
+          {activeTab === tab.url ? '•' : tab.title}
         </NavTab>
       ))}
     </NavbarContainer>

@@ -52,7 +52,6 @@ export const RightSideContainer = styled.div`
   right: 3.5vh;
   bottom: 3.5vh;
   left: 50vw;
-
   background-color: transparent;
   z-index: 0;
 

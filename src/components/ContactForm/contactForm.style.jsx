@@ -8,8 +8,10 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
+  ${
+    '' /* width: 100vw;
+  height: 100vh; */
+  }
   font-weight: 200;
 `;
 
@@ -22,6 +24,12 @@ export const FormContainer = styled.form`
   z-index: 500;
   width: 400px;
   height: 100vh;
+
+  @media (max-width: 768px) {
+    width: 90%; // Adjust the width for smaller screens
+    height: auto; // Make height auto for better mobile view
+    padding: 20px; // Add some padding
+  }
 `;
 
 export const Input = styled.input`
@@ -32,18 +40,23 @@ export const Input = styled.input`
   background-color: transparent;
   color: ${({ theme }) => theme.text};
   font-weight: bold;
-  border: 1px solid ${({ theme }) => theme.accent};
+  border: none;
+  border-bottom: 1px solid;
   ${'' /* font-family: ${({ theme }) => theme.fonts.text}; */}
   cursor: pointer;
-  border-color: ${({ theme }) => theme.primary};
+  border-color: ${({ theme }) => theme.opaque_primary};
   &::placeholder {
-    color: ${({ theme }) => theme.text};
+    color: ${({ theme }) => theme.secondary};
     opacity: 0.8;
   }
 
   &:focus {
     outline: none;
-    border-color: ${({ theme }) => theme.accent};
+    border-color: ${({ theme }) => theme.primary};
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
   }
 `;
 
@@ -55,18 +68,23 @@ export const TextArea = styled.textarea`
   background-color: transparent;
   color: ${({ theme }) => theme.text};
   font-weight: bold;
-  border: 1px solid white;
+  border: none;
+  border-bottom: 1px solid;
+  border-color: ${({ theme }) => theme.opaque_primary};
   ${'' /* font-family: ${({ theme }) => theme.fonts.text}; */}
   cursor: pointer;
-  border-color: ${({ theme }) => theme.primary};
   &::placeholder {
-    color: ${({ theme }) => theme.text};
+    color: ${({ theme }) => theme.secondary};
     opacity: 0.8;
   }
 
   &:focus {
     outline: none;
-    border-color: ${({ theme }) => theme.accent};
+    border-color: ${({ theme }) => theme.primary};
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
   }
 `;
 

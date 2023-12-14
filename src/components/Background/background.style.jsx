@@ -32,6 +32,8 @@ export const ClearContainer = styled.div`
   background-color: transparent;
   border: 2px solid ${(props) => props.borderColor};
   overflow: hidden;
+  animation: ${FadeInAnimation} 2s ease-in-out;
+
   ${'' /*  */}
 `;
 
@@ -44,12 +46,13 @@ export const NameContainer = styled.div`
   left: 0;
   text-align: left;
   margin: 3vh;
-  width: 25vw;
+  width: 45vw;
   background-color: transparent;
   ${'' /* background-color: ${(props) => props.bgColor}; */}
   padding: 0;
   overflow: hidden;
   z-index: 1;
+
   @media (max-width: 768px) {
     width: 75vw;
   }
@@ -59,17 +62,35 @@ export const Name = styled.h1`
   color: ${(props) => props.textColor};
   font-size: 3rem;
   margin: 0;
+  background-color: transparent;
+  @media (max-width: 1278px) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
 `;
 
 export const UnderText = styled.h3`
   color: ${(props) => props.textColor};
-  font-size: 1.5rem;
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+  @media (max-width: 1278px) {
+    ${'' /* font-size: 2rem; */}
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
 `;
 
 // This is only the nav container for rendering,
 // for functionality , spacing and such,
 // see navbar.component and linked navbar.style
 export const NavbarContainer = styled.div`
-  width: 100vw;
+  width: 25%;
   background-color: transparent;
+  margin-top: 2rem;
 `;

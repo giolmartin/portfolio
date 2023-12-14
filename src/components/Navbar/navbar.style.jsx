@@ -2,13 +2,6 @@ import styled from 'styled-components';
 import { FadeInAnimation } from '../../global.styles';
 
 export const NavbarContainer = styled.nav`
-  ${
-    '' /* position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 80px; */
-  }
   margin: 0;
   padding: 0;
   background-color: transparent;

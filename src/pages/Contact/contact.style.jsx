@@ -1,19 +1,22 @@
 import styled from 'styled-components';
 
-import { colors, FadeInAnimation } from '../../global.styles';
+import { RightSideContainer, FadeInAnimation } from '../../global.styles';
 
 export const ContactContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
+  justify-content: flex-start;
+  margin-right: 4vw;
   background: transparent;
-  height: 100vh;
-  width: 100vw;
   animation: ${FadeInAnimation} 2s ease-in-out;
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+    margin-top: 45vh;
+    align-items: center;
+    justify-content: flex-start;
+  }
 `;
 
-export const Text = styled.h1`
-  color: ${colors.primary};
-  font-size: 3rem;
-  margin-bottom: 2rem;
-`;
+

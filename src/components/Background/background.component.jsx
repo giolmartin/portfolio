@@ -21,7 +21,7 @@ const Background = () => {
       <ClearContainer borderColor={theme.accent}>
         <BackgroundImage />
         <NameContainer bgColor={theme.primary}>
-          <Name textColor={theme.hover}> My Name</Name>
+          <Name textColor={theme.hover}> Giovanni Martin</Name>
           <UnderText textColor={theme.hover}> Full-Stack Developer </UnderText>
           <NavbarContainer>
             <Navbar />
