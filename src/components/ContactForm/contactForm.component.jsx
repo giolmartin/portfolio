@@ -216,7 +216,7 @@ const ContactForm = () => {
 
           <Siz className='siz'>
             <svg
-              id='Capa_1'
+              id='C_1'
               height='30'
               viewBox='0 0 512.056 512.056'
               width='30'
@@ -224,7 +224,7 @@ const ContactForm = () => {
               // Change for animated svg color on submit
               fill='currentColor'
               // fill='white'
-              fillOpacity='0.8'
+              fillOpacity='0.5'
             >
               <path d='m350.038 120.265c-7.206-36.687-27.738-70.157-57.939-92.992l-36.071-27.273-36.071 27.272c-30.201 22.835-50.733 56.305-57.939 92.992h188.02z' />
               <path d='m394.777 252.144v151.096h77.609v-69.027z' />

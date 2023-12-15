@@ -46,10 +46,13 @@ export const Input = styled.input`
   cursor: pointer;
   border-color: ${({ theme }) => theme.opaque_primary};
   &::placeholder {
-    color: ${({ theme }) => theme.secondary};
+    color: ${({ theme }) => theme.text};
+    opacity: 0.3;
+  }
+  &:focus::placeholder {
+    color: ${({ theme }) => theme.text};
     opacity: 0.8;
   }
-
   &:focus {
     outline: none;
     border-color: ${({ theme }) => theme.primary};
@@ -74,7 +77,11 @@ export const TextArea = styled.textarea`
   ${'' /* font-family: ${({ theme }) => theme.fonts.text}; */}
   cursor: pointer;
   &::placeholder {
-    color: ${({ theme }) => theme.secondary};
+    color: ${({ theme }) => theme.text};
+    opacity: 0.3;
+  }
+  &:focus::placeholder {
+    color: ${({ theme }) => theme.text};
     opacity: 0.8;
   }
 
@@ -107,6 +114,10 @@ export const SubmitButton = styled.button`
   font-size: 15px;
   position: relative;
   border-color: black;
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem; // Smaller font size for mobile
+  }
 `;
 
 export const Update = styled.div`
@@ -144,6 +155,10 @@ export const Button = styled.button`
     border-color: 'red';
     transition: 0.5s;
   }
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
 `;
 
 export const RectWrap = styled.svg`
@@ -154,17 +169,24 @@ export const RectWrap = styled.svg`
 `;
 
 export const Siz = styled.div`
-  font-size: 30px;
+  font-size: 2rem;
   z-index: 1000;
+
+  @media (max-width: 768px) {
+    height: 2.5vh;
+  }
 `;
 
 export const Title = styled.h1`
   ${'' /* font-family: ${({ theme }) => theme.fonts.header}; */}
   color: ${({ theme }) => theme.text};
-  color: 'white';
+
   font-weight: 200;
-  font-size: 25px;
+  font-size: 2rem;
   text-align: center;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
 export const Message = styled.p`
