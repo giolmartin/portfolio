@@ -33,7 +33,7 @@ export const ClearContainer = styled.div`
   border: 2px solid ${(props) => props.borderColor};
   overflow: hidden;
   animation: ${FadeInAnimation} 2s ease-in-out;
-
+  z-index: 1;
   ${'' /*  */}
 `;
 

@@ -20,7 +20,7 @@ export const fonts = {
   header: 'Roboto Slab',
   accent: 'Montserrat',
   text: 'Open Sans',
-  speacial: 'Pacifico',
+  special: 'Pacifico',
 };
 
 export const GlobalStyle = createGlobalStyle`
@@ -48,9 +48,9 @@ from {
 
 export const RightSideContainer = styled.div`
   position: absolute;
-  top: 3.5vh;
+  top: 3.7vh;
   right: 3.5vh;
-  bottom: 3.5vh;
+  bottom: 3.7vh;
   left: 50vw;
   background-color: transparent;
   z-index: 0;

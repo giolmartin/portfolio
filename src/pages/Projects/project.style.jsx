@@ -14,8 +14,22 @@ export const ProjectContainer = styled(RightSideContainer)`
   justify-content: flex-start;
   animation: ${FadeInAnimation} 2s ease-in-out;
   background-color: transparent;
-  overflow-y: scroll;
+  overflow-y: scroll ;
+  overflow-x: hidden;
   z-index: 1;
+
+  &::-webkit-scrollbar {
+    width: 1px; /* Adjust the width of the scrollbar */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent; /* Color of the track */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: transparent; /* Color of the scrollbar thumb */
+    border-radius: 5px; /* Rounded corners on the scrollbar thumb */
+  }
 `;
 
 export const Title = styled.h1`
