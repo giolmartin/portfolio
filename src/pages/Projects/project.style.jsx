@@ -1,11 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-import {
-  RightSideContainer,
-  colors,
-  FadeInAnimation,
-} from '../../global.styles';
+import { RightSideContainer, FadeInAnimation } from '../../global.styles';
 
 export const ProjectContainer = styled(RightSideContainer)`
   display: flex;
@@ -14,7 +10,7 @@ export const ProjectContainer = styled(RightSideContainer)`
   justify-content: flex-start;
   animation: ${FadeInAnimation} 2s ease-in-out;
   background-color: transparent;
-  overflow-y: scroll ;
+  overflow-y: scroll;
   overflow-x: hidden;
   z-index: 1;
 
@@ -37,7 +33,7 @@ export const Title = styled.h1`
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-start;
-  color: ${colors.primary};
+  color: ${(props) => props.color};
   font-size: 1.5rem;
   margin-bottom: 5vh;
   margin-top: 20vh;
@@ -49,7 +45,7 @@ export const Title = styled.h1`
 `;
 
 export const ProjectLink = styled(Link)`
-  color: ${colors.primary};
+  color: ${(props) => props.color};
   font-size: 3rem;
   margin-bottom: 2rem;
   margin-top: 1vh;

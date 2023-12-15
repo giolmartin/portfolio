@@ -1,27 +1,5 @@
 import { createGlobalStyle, keyframes, styled } from 'styled-components';
 
-export const colors = {
-  primary: '#7ba2cc',
-  secondary: '#55868C',
-  background: '#36454f',
-  accent: '#A28497',
-  text: '#36454f',
-  hover: '#ffd700',
-  secondary_text: '#2e8b57',
-};
-
-export const colors_animation = {
-  primary: '#A28497',
-  secondary: '#ffd700',
-};
-
-//Choose three fonts and then transfer to the theme context.
-export const fonts = {
-  header: 'Roboto Slab',
-  accent: 'Montserrat',
-  text: 'Open Sans',
-  special: 'Pacifico',
-};
 
 export const GlobalStyle = createGlobalStyle`
   body {
@@ -32,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
             to individual colors for 
             themes and the intro animation */
     }
-    background: ${colors.background};
+    background: #121212;
 
   }
 `;
@@ -53,7 +31,7 @@ export const RightSideContainer = styled.div`
   bottom: 3.7vh;
   left: 50vw;
   background-color: transparent;
-  z-index: 0;
+  z-index: 1;
 
   @media (max-width: 768px) {
     ${'' /* left: 50vw;  */}

@@ -10,12 +10,13 @@ const ProjectsPage = () => {
   return (
     <>
       <ProjectContainer>
-        <Title>PROJECTS</Title>
+        <Title color={theme.primary}>PROJECTS</Title>
         {projects.map((project) => {
           return (
             <ProjectLink
               key={project.id}
               to={`${project.url}`}
+              color={theme.primary}
               hover_color={theme.hover}
             >
               {project.title}

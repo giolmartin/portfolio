@@ -1,5 +1,4 @@
 import styled, { keyframes } from 'styled-components';
-import { colors_animation, fonts } from '../../global.styles.jsx';
 
 const media = {
   large_desktop: '@media(min-width: 1200px)',
@@ -32,9 +31,14 @@ export const fadeOut2 = keyframes`
   }
 `;
 
+export const IntroContainer = styled.div`
+  background-color: transparent;
+  z-index: 1;
+`;
+
 export const Name = styled.div`
-  font-family: ${fonts.accent};
-  color: ${colors_animation.primary};
+  font-family: ${(props) => props.font};
+  color: ${(props) => props.color};
   font-size: 3vw;
   position: absolute;
   top: 50%;
@@ -50,8 +54,8 @@ export const Name = styled.div`
 `;
 
 export const Phrase = styled.div`
-  font-family: ${fonts.header};
-  color: ${colors_animation.secondary};
+  font-family: ${(props) => props.font};
+  color: ${(props) => props.color};
   font-size: 5vw;
   position: absolute;
   top: 50%;

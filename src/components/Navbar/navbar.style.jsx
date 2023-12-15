@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { FadeInAnimation } from '../../global.styles';
 
 export const NavbarContainer = styled.nav`
   margin: 0;
@@ -14,13 +13,15 @@ export const NavbarContainer = styled.nav`
 `;
 
 export const NavTab = styled.div`
+  font-family: ${(props) => props.font};
+  font-weight: 400; 
   padding: 0px;
   color: ${(props) => props.color};
   cursor: pointer;
   position: relative;
   font-size: ${(props) => (props.active ? '2em' : '1em')};
   ${'' /* Check spacing of nav items */}
-  margin: 15px 0px;
+  margin: 10px 0px;
 
   &:hover {
     color: ${(props) => props.hover_color};

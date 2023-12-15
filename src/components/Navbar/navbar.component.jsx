@@ -37,6 +37,7 @@ const Navbar = () => {
           onClick={() => handleTabClick(tab.url)}
           color={theme.text}
           hover_color={theme.hover}
+          font={theme.fonts.heading}
         >
           {activeTab === tab.url ? '•' : tab.title}
         </NavTab>

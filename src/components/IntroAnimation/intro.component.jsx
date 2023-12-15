@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import { useThemeContext } from '../../context/theme.context';
 
-import { Name, Phrase } from './intro.style.jsx';
+import { IntroContainer ,Name, Phrase } from './intro.style.jsx';
 
 const IntroAnimation = ({ onIntroEnd }) => {
+  const { theme } = useThemeContext();
+
   useEffect(() => {
     const timer = setTimeout(() => {
       onIntroEnd();
@@ -12,10 +15,14 @@ const IntroAnimation = ({ onIntroEnd }) => {
   }, [onIntroEnd]);
 
   return (
-    <div>
-      <Name>GIO MARTIN</Name>
-      <Phrase>PORTFOLIO</Phrase>
-    </div>
+    <IntroContainer backgroundColor={theme.background}>
+      <Name color={theme.primary} font={theme.fonts.special}>
+        GIO MARTIN
+      </Name>
+      <Phrase color={theme.primary} font={theme.fonts.special}>
+        PORTFOLIO
+      </Phrase>
+    </IntroContainer>
   );
 };
 

@@ -48,7 +48,6 @@ export const NameContainer = styled.div`
   margin: 3vh;
   width: 45vw;
   background-color: transparent;
-  ${'' /* background-color: ${(props) => props.bgColor}; */}
   padding: 0;
   overflow: hidden;
   z-index: 1;
@@ -59,8 +58,10 @@ export const NameContainer = styled.div`
 `;
 
 export const Name = styled.h1`
-  color: ${(props) => props.textColor};
+  font-family: ${(props) => props.font};
+  color: ${(props) => props.color};
   font-size: 3rem;
+  font-weight: 500;
   margin: 0;
   background-color: transparent;
   @media (max-width: 1278px) {
@@ -73,8 +74,10 @@ export const Name = styled.h1`
 `;
 
 export const UnderText = styled.h3`
-  color: ${(props) => props.textColor};
+  font-family: ${(props) => props.font};
+  color: ${(props) => props.color};
   font-size: 1rem;
+  font-weight: 400;
   padding: 0;
   margin: 0;
   @media (max-width: 1278px) {
@@ -90,7 +93,7 @@ export const UnderText = styled.h3`
 // for functionality , spacing and such,
 // see navbar.component and linked navbar.style
 export const NavbarContainer = styled.div`
-  width: 25%;
+  width: 35%;
   background-color: transparent;
   margin-top: 2rem;
 `;

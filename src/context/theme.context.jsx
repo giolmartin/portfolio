@@ -10,16 +10,31 @@ const themes = {
     text: '',
     hover: '',
     secondary_text: '',
+
+    fonts: {
+      heading: 'Raleway, sans-serif',
+      body: 'Roboto, sans-serif',
+      special: 'Lora, serif',
+    },
   },
   dark: {
-    primary: '#0DCAF0',
-    secondary: '#6C757D',
-    background: '#121212',
-    accent: '#FFC107',
-    text: '#E1E1E1',
-    hover: '#198754',
-    secondary_text: '#ADB5BD',
-    opaque_primary: 'rgba(13,202,240, 0.2)',
+    primary: '#A2D2FF', // Baby Blue Eyes
+    secondary: '#FFAFCC', // Nadeshiko Pink
+    background: '#22223B', // Russian Violet
+    accent: '#9D8189', // Old Lavender
+    text: '#CDB4DB', // Thistle
+    hover: '#BDE0FE', // Beau Blue
+    secondary_text: '#FFCDB2', // Unbleached Silk
+    highlight: '#FEC89A', // Peach Puff
+    warning: '#FFD6A5', // Peach
+    success: '#FFB5A7', // Light Coral
+    opaque_primary: 'rgba(162, 210, 255, 0.2)',
+  
+    fonts: {
+      heading: 'Raleway',
+      body: 'Roboto',
+      special: 'Lora',
+    },
   },
 };
 
@@ -33,6 +48,7 @@ export const ThemeProvider = ({ children }) => {
   const toggleTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
   };
+
   return (
     <ThemeContext.Provider value={{ theme: themes[theme], toggleTheme }}>
       {children}

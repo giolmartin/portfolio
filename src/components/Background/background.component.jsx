@@ -20,9 +20,13 @@ const Background = () => {
       <BackgroundContainer backgroundColor={theme.background} />
       <ClearContainer borderColor={theme.accent}>
         <BackgroundImage />
-        <NameContainer bgColor={theme.primary}>
-          <Name textColor={theme.hover}> Giovanni Martin</Name>
-          <UnderText textColor={theme.hover}> Full-Stack Developer </UnderText>
+        <NameContainer>
+          <Name color={theme.hover} font={theme.fonts.special}>
+            Giovanni Martin
+          </Name>
+          <UnderText color={theme.hover} font={theme.fonts.text}>
+            Full-Stack Developer
+          </UnderText>
           <NavbarContainer>
             <Navbar />
           </NavbarContainer>

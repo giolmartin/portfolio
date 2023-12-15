@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { colors, FadeInAnimation } from '../../global.styles';
+import {  FadeInAnimation } from '../../global.styles';
 
 export const HomeContainer = styled.div`
   display: flex;
@@ -41,7 +41,8 @@ export const TextContainer = styled.div`
 `;
 
 export const Text = styled.h3`
-  color: ${colors.primary};
+  font-family: ${(props) => props.font};
+  color: ${(props) => props.color};
   font-size: 2rem;
   margin-bottom: 2rem;
   @media (max-width: 768px) {
