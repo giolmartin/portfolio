@@ -9,7 +9,7 @@ const IntroAnimation = ({ onIntroEnd }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       onIntroEnd();
-    }, 7000); // Adjust time based on your animation duration
+    }, 6000); // Adjust time based on your animation duration
 
     return () => clearTimeout(timer); // Cleanup the timer
   }, [onIntroEnd]);
@@ -24,6 +24,7 @@ const IntroAnimation = ({ onIntroEnd }) => {
       </Phrase>
     </IntroContainer>
   );
+    
 };
 
 export default IntroAnimation;

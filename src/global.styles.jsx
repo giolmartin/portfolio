@@ -1,6 +1,5 @@
 import { createGlobalStyle, keyframes, styled } from 'styled-components';
 
-
 export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
@@ -10,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
             to individual colors for 
             themes and the intro animation */
     }
-    background: #121212;
+    background: #2B2D42;
 
   }
 `;
