@@ -28,7 +28,18 @@ const themes = {
     highlight: '#FCA311', // Orange Web
     warning: '#E85D04', // Orange (RYB)
     success: '#2A9D8F', // Persian Green
-    opaque_primary: 'rgba(230, 57, 70, 0.2)',
+
+    //Opaque colors
+    opaque_primary: 'rgba(241, 250, 238, 0.2)', // Honeydew (off-white)
+    opaque_secondary: 'rgba(230, 57, 70, 0.1)', // Scarlet Red
+    opaque_background: 'rgba(43, 45, 66, 0.2)', // Space Cadet (dark gray)
+    opaque_accent: 'rgba(168, 218, 220, 0.2)', // Powder Blue
+    opaque_text: 'rgba(255, 255, 255, 0.2)', // White
+    opaque_hover: 'rgba(69, 123, 157, 0.2)', // Celadon Blue
+    opaque_secondary_text: 'rgba(244, 244, 242, 0.2)', // Anti-flash White
+    opaque_highlight: 'rgba(252, 163, 17, 0.2)', // Orange Web
+    opaque_warning: 'rgba(232, 93, 4, 0.2)', // Orange (RYB)
+    opaque_success: 'rgba(42, 157, 143, 0.2)', // Persian Green
 
     fonts: {
       heading: 'Raleway',

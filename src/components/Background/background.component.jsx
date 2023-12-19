@@ -11,6 +11,7 @@ import {
   Name,
   UnderText,
 } from './background.style.jsx';
+import P5Wrapper from '../P5Wrapper/p5.wrapper.component.jsx';
 
 const Background = () => {
   const { theme } = useThemeContext();
@@ -19,7 +20,7 @@ const Background = () => {
     <>
       <BackgroundContainer backgroundColor={theme.background} />
       <ClearContainer borderColor={theme.accent}>
-        <BackgroundImage />
+        <P5Wrapper theme={theme} />
         <NameContainer>
           <Name color={theme.primary} font={theme.fonts.special}>
             Giovanni Martin
