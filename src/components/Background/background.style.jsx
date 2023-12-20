@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import ToggleButton from '../ToggleBoxButton/toggleButton.component';
 
 import { FadeInAnimation } from '../../global.styles';
 

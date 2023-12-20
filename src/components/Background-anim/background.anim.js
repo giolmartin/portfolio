@@ -1,7 +1,7 @@
 import p5 from 'p5';
 
-//TODO: Import done, and working, now twitching and adding a button to stop animation needed 
-const background_anim = (p, theme) => {
+//TODO: Import done, and working, now twitching and adding a button to stop animation needed
+const background_anim = (p, theme, isAnim) => {
   const linspace = (n, mi, ma) => {
     // get n numbers evenly distributed between (mi, ma).
     // includes the end values.
@@ -65,23 +65,26 @@ const background_anim = (p, theme) => {
   };
 
   p.draw = () => {
-    const mouse = vec(p.mouseX, p.mouseY);
-    obj = obj.map((o) => {
-      // vector from mouse to circle
-      const df = o.copy().sub(mouse);
-      // lengt of df, multiplied by 0.2, can change if neccesary
-      const l = df.mag() * 0.2;
-      // draw with random radius and color
-      drawCirc([o], p.random(l), theme.opaque_secondary);
-      // take a small step in the direction of the mouse.
-      // and add some randomness
-      return o.copy().sub(df.normalize()).add(rndInCirc(5));
-    });
+    if (isAnim) {
+      const mouse = vec(p.mouseX, p.mouseY);
+      obj = obj.map((o) => {
+        // vector from mouse to circle
+        const df = o.copy().sub(mouse);
+        // lengt of df, multiplied by 0.2, can change if neccesary
+        const l = df.mag() * 0.2;
+        // draw with random radius and color
+        drawCirc([o], p.random(l), theme.opaque_secondary);
+        // take a small step in the direction of the mouse.
+        // and add some randomness
+        return o.copy().sub(df.normalize()).add(rndInCirc(5));
+      });
+    }
   };
   p.windowResized = () => {
     p.resizeCanvas(p.windowWidth, p.windowHeight);
     init(3, p.windowHeight); // Reinitialize or adjust objects for new size
   };
+  
 };
 
 export default background_anim;
