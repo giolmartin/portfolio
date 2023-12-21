@@ -16,7 +16,6 @@ import ContactPage from './pages/Contact/contact.page';
 
 function App() {
   const [introComplete, setIntroComplete] = useState(false);
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setIntroComplete(true);

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import ToggleButton from '../ToggleBoxButton/toggleButton.component';
+import ToggleButton from '../StyledButtons/toggleButton.component';
 
 import { FadeInAnimation } from '../../global.styles';
 
@@ -27,15 +27,19 @@ export const ClearContainer = styled.div`
   ${'' /*  */}
   position: absolute;
   top: 3.5vh;
-  left: 3.5vh;
-  right: 3.5vh;
+  left: 3.5vw;
+  right: 3.5vw;
   bottom: 3.5vh;
   background-color: transparent;
   border: 2px solid ${(props) => props.borderColor};
   overflow: hidden;
   animation: ${FadeInAnimation} 2s ease-in-out;
   z-index: 1;
-  ${'' /*  */}
+
+  @media (max-width: 768px) {
+    right: 3.5vh;
+    left: 3.5vh;
+  }
 `;
 
 export const NameContainer = styled.div`
@@ -97,4 +101,62 @@ export const NavbarContainer = styled.div`
   width: 35%;
   background-color: transparent;
   margin-top: 2rem;
+`;
+
+export const ButtonContainer = styled.div`
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: transparent;
+  width: 2.5vw;
+  bottom: 3.5vh;
+  top: 3.5vh;
+  height: 100%;
+
+  @media (max-width: 768px) {
+    width: 5vw;
+  }
+`;
+export const ToggleButtonContainer = styled.div`
+  position: fixed;
+  left: 1.5vw;
+  top: 3.5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  ${'' /* background-color: yellow; */}
+  @media (max-width: 768px) {
+    width: 5vw;
+  }
+`;
+export const ThemeButtonsContainer = styled.div`
+  position: fixed;
+  left: 1.5vw;
+  bottom: 3.5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  ${'' /* background-color: green; */}
+  z-index: 2;
+  @media (max-width: 768px) {
+    width: 5vw;
+  }
+`;
+
+export const ButtonText = styled.span`
+  font-size: 1rem;
+  font-family: ${(props) => props.font};
+  transform: rotate(270deg);
+  color: black;
+  ${'' /* background-color: pink; */}
+  margin: 15px 0px;
+  color: ${(props) => props.color};
+  animation: ${FadeInAnimation} 1s ease-in-out;
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
 `;

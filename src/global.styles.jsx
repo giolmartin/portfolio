@@ -26,7 +26,7 @@ from {
 export const RightSideContainer = styled.div`
   position: absolute;
   top: 3.7vh;
-  right: 3.5vh;
+  right: 3.5vw;
   bottom: 3.7vh;
   left: 50vw;
   background-color: transparent;
@@ -34,5 +34,7 @@ export const RightSideContainer = styled.div`
 
   @media (max-width: 768px) {
     ${'' /* left: 50vw;  */}
+
+    right: 3.5vh;
   }
 `;

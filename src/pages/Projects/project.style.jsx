@@ -11,20 +11,25 @@ export const ProjectContainer = styled(RightSideContainer)`
   animation: ${FadeInAnimation} 2s ease-in-out;
   background-color: transparent;
   overflow-y: scroll;
+
   overflow-x: hidden;
   z-index: 1;
 
   &::-webkit-scrollbar {
-    width: 1px; /* Adjust the width of the scrollbar */
+    width: 1px;
   }
 
   &::-webkit-scrollbar-track {
-    background: transparent; /* Color of the track */
+    background: transparent;
   }
 
   &::-webkit-scrollbar-thumb {
-    background: transparent; /* Color of the scrollbar thumb */
-    border-radius: 5px; /* Rounded corners on the scrollbar thumb */
+    background: transparent;
+    border-radius: 5px;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 20vh;
   }
 `;
 

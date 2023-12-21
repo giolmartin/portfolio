@@ -3,13 +3,29 @@ import React, { createContext, useState, useContext } from 'react';
 const themes = {
   //TODO: Add colors when I decide on a color scheme for the site and the implementation.
   light: {
-    primary: '',
-    secondary: '',
-    background: '',
-    accent: '',
-    text: '',
-    hover: '',
-    secondary_text: '',
+    name: 'light',
+    primary: '#2B2D42', // Space Cadet (dark gray) for contrast
+    secondary: '#A8DADC', // Powder Blue
+    background: '#F1FAEE', // Honeydew (off-white)
+    accent: '#E63946', // Scarlet Red
+    text: '#2B2D42', // Space Cadet (dark gray) for readability
+    hover: '#FCA311', // Orange Web
+    secondary_text: '#457B9D', // Celadon Blue
+    highlight: '#FFFFFF', // White
+    warning: '#2A9D8F', // Persian Green
+    success: '#E85D04', // Orange (RYB)
+
+    // Opaque colors
+    opaque_primary: 'rgba(43, 45, 66, 0.2)', // Space Cadet (dark gray)
+    opaque_secondary: 'rgba(168, 218, 220, 0.2)', // Powder Blue
+    opaque_background: 'rgba(241, 250, 238, 0.2)', // Honeydew (off-white)
+    opaque_accent: 'rgba(230, 57, 70, 0.2)', // Scarlet Red
+    opaque_text: 'rgba(43, 45, 66, 0.2)', // Space Cadet (dark gray)
+    opaque_hover: 'rgba(252, 163, 17, 0.2)', // Orange Web
+    opaque_secondary_text: 'rgba(69, 123, 157, 0.2)', // Celadon Blue
+    opaque_highlight: 'rgba(255, 255, 255, 0.2)', // White
+    opaque_warning: 'rgba(42, 157, 143, 0.2)', // Persian Green
+    opaque_success: 'rgba(232, 93, 4, 0.2)', // Orange (RYB)
 
     fonts: {
       heading: 'Raleway, sans-serif',
@@ -18,6 +34,7 @@ const themes = {
     },
   },
   dark: {
+    name: 'dark',
     primary: '#F1FAEE', // Honeydew (off-white)
     secondary: '#E63946', // Scarlet Red
     background: '#2B2D42', // Space Cadet (dark gray)
@@ -56,8 +73,9 @@ export const useThemeContext = () => useContext(ThemeContext);
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState('dark');
 
-  const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
+  const toggleTheme = (t) => {
+    console.log('Changing theme to:', t); // Debuggin
+    setTheme(t);
   };
 
   return (

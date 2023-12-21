@@ -10,7 +10,8 @@ export const StyledToggleButton = styled.button`
   cursor: pointer;
   transition: background-color 0.3s;
 
-  &:after {
+  ${
+    '' /* &:after {
     content: '';
     display: ${({ isAnim }) => (isAnim ? 'none' : 'block')};
     width: 1.5rem;
@@ -22,5 +23,6 @@ export const StyledToggleButton = styled.button`
 
   &:focus {
     outline: none;
+  } */
   }
 `;
